@@ -1,0 +1,119 @@
+       77 M PIC 99 VALUE 0.
+       77 SON-MUSTERI-KODU PIC XXX VALUE SPACES.
+       77 BORC-BAKIYE-M9 PIC 9(9).
+       77 ALACAK-BAKIYE-M9 PIC 9(9).
+       77 CEVAP PIC X VALUE SPACES.
+       77 SAYFA-9 PIC 99.
+       77 SIRA-9 PIC 99.
+       77 SAYFA-BORC-C9 PIC 9(9).
+       77 SAYFA-ALACAK-C9 PIC 9(9).
+       77 GENEL-ALACAK-C9 PIC 9(10).
+       77 GENEL-BORC-C9 PIC 9(10).
+       77 DD PIC X VALUE SPACE.
+       77 S-BORC-M9 PIC 9(10).
+       77 S-ALACAK-M9 PIC 9(10).
+       77 S-BORC-BAKIYE-M9 PIC 9(10).
+       77 S-ALACAK-BAKIYE-M9 PIC 9(10).
+       77 G-BORC-M9 PIC 9(11).
+       77 G-ALACAK-M9 PIC 9(11).
+       77 G-ALACAK-BAKIYE-M9 PIC 9(11).
+       77 G-BORC-BAKIYE-M9 PIC 9(11).
+       77 KONTROL PIC 99.
+       77 CIZGI PIC X(80) VALUE ALL "=".
+       01 SON-TARIH.
+           05 SON-YIL PIC 99.
+           05 SON-AY PIC 99.
+           05 SON-GUN PIC 99.
+       01 BAS-1.
+           05 F PIC X(10) VALUE "BIM KODU:".
+           05 CARI-KOD PIC XXXB(16).
+           05 F PIC X(39) VALUE "CARI KAYITLARI DOKUMU".
+           05 F PIC X(10) VALUE "SAYFA NO:".
+           05 SAYFA-NO-B1 PIC Z9.
+       01 BAS-2.
+           05 F PIC X(8) VALUE "UNVANI:".
+           05 MUS-UNVAN PIC X(30).
+       01 BAS-3.
+           05 F PIC X(3) VALUE "SR".
+           05 F PIC X(10) VALUE "TARIH".
+           05 F PIC X(7) VALUE "BLG NO".
+           05 F PIC X(35) VALUE "IZAHAT".
+           05 F PIC X(12) VALUE "BRC TUTARI".
+           05 F PIC X(14) VALUE "ALACAK TUTARI".
+       01 BAS-4.
+           05 SIRA-B4 PIC Z9B.
+           05 GUN-B4 PIC 99/.
+           05 AY-B4 PIC 99/.
+           05 YIL-B4 PIC 99BB.
+           05 BELGE-NO-B4 PIC X(6)B.
+           05 IZAHAT-B4 PIC X(30).
+           05 BORC-TUTARI-B4 PIC BBBZZ,ZZZ,ZZ9.
+           05 F PIC XX VALUE ".-".
+           05 ALACAK-TUTARI-B4 PIC BBBZZ,ZZZ,ZZ9.
+           05 F PIC XX VALUE ".-".
+       01 BAS-5.
+           05 F PIC X(35) VALUE SPACES.
+           05 F PIC X(15) VALUE "SAYFA TOPLAMI:".
+           05 S-BORC-B5 PIC BBZZZ,ZZZ,ZZ9.
+           05 F PIC XX VALUE ".-".
+           05 S-ALACAK-B5 PIC BBZZZ,ZZZ,ZZ9.
+           05 F PIC XX VALUE ".-".
+       01 BAS-6.
+           05 F PIC X(35) VALUE SPACES.
+           05 F PIC X(15) VALUE "GENEL TOPLAM :".
+           05 G-BORC-B6 PIC Z,ZZZ,ZZZ,ZZ9.
+           05 F PIC XX VALUE ".-".
+           05 G-ALACAK-B6 PIC Z,ZZZ,ZZZ,ZZ9.
+           05 F PIC XX VALUE ".-".
+       01 BAS-7.
+           05 F PIC X(26) VALUE SPACES.
+           05 F PIC X(41) VALUE "MIZAN BILGILERI DOKUMU".
+           05 F PIC X(10) VALUE "SAYFA NO:".
+           05 SAYFA-NO-B10 PIC Z9.
+       01 BAS-8.
+           05 F PIC XXX VALUE "SR".
+           05 F PIC X(4) VALUE "KOD".
+           05 F PIC X(22) VALUE "MUSTERININ UNVANI".
+           05 F PIC X(12) VALUE "BRC TUTARI".
+           05 F PIC X(12) VALUE "ALC TUTARI".
+           05 F PIC X(13) VALUE "BRC BAKIYE".
+           05 F PIC X(12) VALUE "ALC BAKIYE".
+       01 BAS-9.
+           05 SIRA-B12 PIC Z9B.
+           05 KOD-B12 PIC XXXB.
+           05 UNVAN-B12 PIC X(20)BB.
+           05 BORC-B12 PIC Z(8)9.
+           05 F PIC XX VALUE ".-".
+           05 ALACAK-B12 PIC BBZ(8)9.
+           05 F PIC XXBB VALUE ".-".
+           05 B-BAKIYE-B12 PIC Z(8)9.
+           05 F PIC XXBB VALUE ".-".
+           05 A-BAKIYE-B12 PIC X(8)9.
+           05 F PIC XX VALUE ".-".
+       01 BAS-10.
+           05 F PIC X(13) VALUE SPACES.
+           05 F PIC X(14) VALUE "SAYFA TOPLAMI:".
+           05 S-BORC-B13 PIC Z(10)9.
+           05 F PIC XX VALUE ".-".
+           05 S-ALACAK-B13 PIC Z(10)9.
+           05 F PIC XX VALUE ".-".
+           05 S-B-BAKIYE-B13 PIC Z(10)9.
+           05 F PIC XX VALUE ".-".
+           05 S-A-BAKIYE-B13 PIC Z(10)9.
+           05 F PIC XX VALUE ".-".
+       01 BAS-11.
+           05 F PIC X(13) VALUE SPACES.
+           05 F PIC X(14) VALUE "GENEL TOPLAM:".
+           05 G-BORC-B14 PIC Z(10)9.
+           05 F PIC XX VALUE ".-".
+           05 G-ALACAK-B14 PIC Z(10)9.
+           05 F PIC XX VALUE ".-".
+           05 G-B-BAKIYE-B14 PIC Z(10)9.
+           05 F PIC XX VALUE ".-".
+           05 G-A-BAKIYE-B14 PIC Z(10)9.
+           05 F PIC XX VALUE ".-".
+       01 BAS-12.
+           05 F PIC X(26) VALUE SPACES.
+           05 F PIC X(22) VALUE ALL "=".
+       77 N PIC 9 VALUE ZEROS.
+	   

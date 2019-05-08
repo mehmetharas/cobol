@@ -1,0 +1,19 @@
+       FD KAYIT LABEL RECORD STANDARD VALUE OF FILE-ID "KAYIT.DOS".
+	   01 BILGI.  
+           10 K-KISIM PIC XX.  
+           10 K-TARIH.
+              20 K-YIL PIC 99.
+              20 K-AY PIC 99.
+              20 K-GUN PIC 99.
+           10 K-NO PIC 999.
+           10 IZAHAT PIC X(40).
+           10 K-TUTAR PIC 9(8).
+           10 K-KNT PIC 9.
+           10 H-TARIH.
+              20 H-YIL PIC 99.
+              20 H-AY PIC 99.
+              20 H-GUN PIC 99.
+       01 YENI-BILGI.
+           10 KOD PIC X(11).
+		   10 F PIC X(55).
+

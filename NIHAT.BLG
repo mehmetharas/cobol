@@ -1,0 +1,122 @@
+       77 M PIC 99 VALUE 0.
+	   77 BOSLUK PIC X VALUE SPACE.
+       77 N PIC 9 VALUE 0.
+       77 CEVAP PIC X VALUE SPACE.
+       77 DD PIC X VALUE SPACE.
+       77 SAKLA PIC XX VALUE SPACE.
+       77 KONTROL PIC X VALUE SPACE.
+       77 S-NO PIC 999.
+       77 S-GLR PIC 9(10).
+       77 S-GDR PIC 9(10).
+       77 S-SGLR PIC 9(10).
+       77 S-SGDR PIC 9(10).
+       77 G-GLR PIC 9(11).
+       77 G-GDR PIC 9(11).
+       77 G-SGLR PIC 9(11).
+       77 G-SGDR PIC 9(11).
+       77 I PIC 99 VALUE 0.
+       77 CIZGI PIC X(80) VALUE ALL "*".
+       01 ILK-TARIH.
+           05 ILK-YIL PIC 99.
+           05 ILK-AY PIC 99.
+           05 ILK-GUN PIC 99.
+       01 SON-TARIH.
+           05 SON-YIL PIC 99.
+           05 SON-AY PIC 99.
+           05 SON-GUN PIC 99.
+       01 AYLIK-BLANCO.
+           05 AY-GUNU OCCURS 31 TIMES.
+             10 TARIH.
+                 20 GUN PIC 99.
+                 20 AY PIC 99.
+                 20 YIL PIC 99.
+             10 GELIR PIC 9(9).
+             10 GIDER PIC 9(9).
+             10 SUPHELI-GELIR PIC 9(9).
+             10 SUPHELI-GIDER PIC 9(9).
+       01 BAS1.
+           05 F PIC X(62) VALUE "BEBIM A.S.".
+           05 F PIC X(18) VALUE "CEK-SENET PROGRAMI".
+       01 BAS2.
+           05 DOKUM-TURU PIC X(17).
+           05 F PIC X(51) VALUE "DOKUMU".
+           05 F PIC X(10) VALUE "SAYFA NO:".
+           05 SAYFA-NO PIC 99.
+       01 BAS3.
+           05 F PIC X(63) VALUE "GRN VADE-TRH ALIS-TRH IZAHAT".
+           05 F PIC X(17) VALUE "     TUTAR     OD".
+       01 BAS4.
+           05 SIRA-NO PIC ZZ9B.
+           05 V-TARIH.
+              10 V-GUN PIC 99.
+              10 F PIC X VALUE "/".
+              10 V-AY PIC 99.
+              10 F PIC X VALUE "/".
+              10 V-YIL PIC 99B.
+           05 A-TARIH.
+              10 A-GUN PIC 99.
+              10 F PIC X VALUE "/".
+              10 A-AY PIC 99.
+              10 F PIC X VALUE "/".
+              10 A-YIL PIC 99B.
+           05 IZ PIC X(40)B.
+           05 KK-TUTAR PIC ZZ,ZZZ,ZZ9.
+           05 F PIC X(5) VALUE ".-".
+           05 ODEMESI PIC 9.
+       01 BAS5.
+           05 F PIC X(45) VALUE SPACE.
+           05 F PIC X(15) VALUE "SAYFA TOPLAMI:".
+           05 S-TOPLAM PIC Z,ZZZ,ZZZ,ZZ9.
+           05 F PIC X(17) VALUE ".-".
+       01 BAS6.
+           05 F PIC X(43) VALUE SPACE.
+           05 F PIC X(16) VALUE "GENEL TOPLAMLAR".
+           05 G-TOPLAM PIC ZZ,ZZZ,ZZZ,ZZ9.
+           05 F PIC X(7) VALUE ".-".
+       77 SAYFA-TOPLAMI PIC 9(10).
+       77 GENEL-TOPLAM PIC 9(11).
+       01 BAS7.
+           05 F PIC X(68) VALUE "AYLIK GELIR/GIDER DOKUMU".
+           05 F PIC X(10) VALUE "SAYFA-NO:".
+           05 SYF-NO PIC 99.
+       01 BAS8.
+           05 F PIC X(43) VALUE
+           "TARIH             GELIR              GIDER".
+           05 F PIC X(37) VALUE 
+           "SUPHELI GELIR      SUPHELI GIDER".
+       01 BAS9.
+           05 B-TARIH.
+              10 B-GUN PIC 99.
+              10 F PIC X VALUE "/".
+              10 B-AY PIC 99.
+              10 F PIC X VALUE "/".
+              10 B-YIL PIC 99BBB.
+           05 B-GELIR PIC ZZZ,ZZZ,ZZ9.
+           05 F PIC X(6) VALUE ".-".
+           05 B-GIDER PIC ZZZ,ZZZ,ZZ9.
+           05 F PIC X(6) VALUE ".-".
+           05 BG-GELIR PIC ZZZ,ZZZ,ZZ9.
+           05 F PIC X(6) VALUE ".-".
+           05 BG-GIDER PIC ZZZ,ZZZ,ZZ9.
+           05 F PIC X(2) VALUE ".-".
+       01 BAS10.
+           05 F PIC X(10) VALUE "S.TOPLAM:".
+           05 S-GELIR PIC Z,ZZZ,ZZZ,ZZ9.
+           05 F PIC X(4) VALUE  ".-".
+           05 S-GIDER PIC Z,ZZZ,ZZZ,ZZ9.
+           05 F PIC X(4) VALUE ".-".
+           05 SS-GELIR PIC Z,ZZZ,ZZZ,ZZ9.
+           05 F PIC X(4) VALUE ".-".
+           05 SS-GIDER PIC Z,ZZZ,ZZZ,ZZ9.
+           05 F PIC X(4) VALUE ".-".
+       01 BAS11.
+           05 F PIC X(9) VALUE "G-TOPLAM:".
+           05 G-GELIR PIC ZZ,ZZZ,ZZZ,ZZ9.
+           05 F PIC XXX VALUE ".-".
+           05 G-GIDER PIC ZZ,ZZZ,ZZZ,ZZ9.
+           05 F PIC XXX VALUE ".-".
+           05 GS-GELIR PIC ZZ,ZZZ,ZZZ,ZZ9.
+           05 F PIC XXX VALUE ".-".
+           05 GS-GIDER PIC ZZ,ZZZ,ZZZ,ZZ9.
+           05 F PIC XXX VALUE ".-".
+

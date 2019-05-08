@@ -1,0 +1,19 @@
+       FD MIZAN LABEL RECORD STANDARD VALUE OFF FILE-ID "MIZ.DOS".
+       01 MIZAN-KAYDI.
+           05 MUSTERI-KODU PIC XXX.
+           05 MUSTERI-UNVANI PIC X(30).
+           05 BORC-TUTARI PIC 9(9).
+           05 ALACAK-TUTARI PIC 9(9).
+       FD CARI LABEL RECORD STANDARD VALUE OFF FILE-ID "CARI.DOS".
+       01 CARI-KAYDI.
+           05 CARI-ANAHTARI.
+              10 CARI-KODU PIC XXX.
+              10 ISLEM-TARIHI.
+                   20 ISLEM-YILI PIC 99.
+                   20 ISLEM-AYI PIC 99.
+                   20 ISLEM-GUNU PIC 99.
+              10 BORC-ALACAK PIC X.
+              10 BELGE-NO PIC X(6).
+           05 IZAHAT PIC X(30).
+           05 TUTAR PIC 9(8).
+
